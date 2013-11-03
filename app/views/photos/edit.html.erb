@@ -1,0 +1,29 @@
+
+
+<h1>Edit Post</h1>
+
+<%=  form_tag photo_url(@photo.id), method: 'patch' do %>
+<%= label_tag 'titlexx' , 'Title:'  %>
+<%=  text_field_tag 'titlexx' , "#{@photo.title}" , size: 50 %>
+<br>
+
+<%= label_tag 'desc', "Description:" %>
+<%= text_area_tag 'desc', "#{@photo.desc}" , rows: 5 , cols: 30 %>
+<br>
+
+<%= label_tag 'img' , "Image URL:" %>
+<%= text_field_tag 'img' , "#{@photo.img}" , size: 50 %>
+<br>
+
+<%= label_tag 'price' , "Price:" %>
+<%= text_field_tag 'price' , "#{@photo.price}" , size: 50 %>
+
+<br>
+
+<%= submit_tag "Update" %>
+
+<% end %>
+
+
+
+

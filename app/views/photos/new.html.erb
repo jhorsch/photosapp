@@ -1,0 +1,25 @@
+
+<h1>Create New Product</h1>
+
+<%= form_tag  photos_url , method: 'post' do %>
+
+<%= label_tag 'title' , 'Title:'  %>
+<%=  text_field_tag 'title' , "" , size: 50 %>
+<br>
+
+<%= label_tag 'desc', "Description:" %>
+<%= text_area_tag 'desc', "" , rows: 5 , cols: 30 %>
+<br>
+
+<%= label_tag 'img' , "Image URL:" %>
+<%= text_field_tag 'img' , "" , size: 50 %>
+<br>
+
+<%= label_tag 'price' , "Price:" %>
+<%= text_field_tag 'price' , "" , size: 50 %>
+
+<br>
+
+<%= submit_tag "Add Photo" %>
+
+  <% end %>

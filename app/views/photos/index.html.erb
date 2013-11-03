@@ -1,0 +1,13 @@
+
+<h1>Chciago Black & White Photo Blog</h1>
+
+<%= link_to "Create New Product" , new_photo_url, method: 'get' %>
+
+<% @photos.each do |photo| %>
+<h2><%= photo.title %></h2>
+<img src = <%= photo.img %> width="500">
+<p> <%= photo.desc[0 ,400] %> .... <%= link_to "read more" , photo_url(photo.id), method: 'get' %> </p>
+<p> Cost:  <%= photo.price %></p>
+
+
+<% end  %>
