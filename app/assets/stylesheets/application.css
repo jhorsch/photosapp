@@ -11,3 +11,15 @@
  *= require_self
  *= require_tree .
  */
+.photorow {
+  clear: both;
+  border-top: 2px
+  solid #ED742B;
+  padding: 20px 0px;
+  margin: 20px 0px;}
+.photorow img { float: right; margin: 0px 0px 20px 20px; width: 300px; }
+
+.photorow h1 a.photorow h1 a:visited { text-decoration: none; color: #444;}
+
+.photorow img.free { width: 80px; box-shadow: none; float: none;}
+p { line-height: 24px; color: #444; font-size: 16px;}

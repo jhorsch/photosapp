@@ -1,13 +1,27 @@
 
-<h1>Chciago Black & White Photo Blog</h1>
-
+<h1>Chicago Photography Blog</h1>
+<br>
 <%= link_to "Create New Product" , new_photo_url, method: 'get' %>
+<br>
+<%= link_to "Sort by Title", photos_url(:sort => "title") %>
+  | Showing <%= @photos.count %> of <%= Photo.count %> photos.
 
 <% @photos.each do |photo| %>
-<h2><%= photo.title %></h2>
-<img src = <%= photo.img %> width="500">
-<p> <%= photo.desc[0 ,400] %> .... <%= link_to "read more" , photo_url(photo.id), method: 'get' %> </p>
-<p> Cost:  <%= photo.price %></p>
 
+<div class="photorow">
+
+  <div class='col-md-8'>
+
+    <h2><%= photo.title %></h2>
+    <p> <%= photo.desc[0 ,400] %> .... <%= link_to "read more" , photo_url(photo.id), method: 'get' %> </p>
+    <p> Cost:  <%= photo.price %></p>
+
+  </div>
+
+   <div class="col-md-4">
+  <img src = <%= photo.img %> width="500">
+  </div>
+
+</div>
 
 <% end  %>

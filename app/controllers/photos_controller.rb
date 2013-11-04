@@ -1,7 +1,9 @@
 class PhotosController < ApplicationController
 
   def index
-    @photos = Photo.all
+    @photos = Photo.order(:title)
+
+     # @photos = Photo.order(:title).page(params[:id]).per(2)
 end
 
 
