@@ -5,12 +5,12 @@ class ApplicationController < ActionController::Base
 
 
 
-before_filter :authenticate
+# before_filter :authenticate
 
-def authenticate
-  authenticate_or_request_with_http_basic do |username, password|
-    username == ENV['HTTP_USERNAME'] && password == ENV['HTTP_PASSWORD']
-  end
-end
+# # def authenticate
+# #   authenticate_or_request_with_http_basic do |username, password|
+# #     username == ENV['HTTP_USERNAME'] && password == ENV['HTTP_PASSWORD']
+# #   end
+# # end
 
 end
